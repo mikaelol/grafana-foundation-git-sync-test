@@ -106,4 +106,17 @@ const dashboardManifest = new ManifestBuilder()
   )
   .spec(dashboard.build());
 
-console.log(JSON.stringify(dashboardManifest.build(), null, 2));
+const nodeProcess = (
+  globalThis as typeof globalThis & { process?: { argv?: string[] } }
+).process;
+const isProdBuild = nodeProcess?.argv?.includes("--prod") ?? false;
+
+// Output when running 'npm run build'
+if (!isProdBuild) {
+  console.log(JSON.stringify(dashboardManifest.build(), null, 2));
+}
+
+// Output when running 'npm run build-prod'
+if (isProdBuild) {
+  console.log(JSON.stringify(dashboard.build(), null, 2));
+}

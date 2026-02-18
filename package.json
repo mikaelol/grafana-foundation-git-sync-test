@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "mkdir -p resources && node index.ts > resources/output.json",
-    "build-prod": "mkdir -p cloud-dashboards && node index.ts > cloud-dashboards/output.json",
+    "build-prod": "mkdir -p cloud-dashboards && node index.ts --prod > cloud-dashboards/output.json",
     "format": "biome format --write *.ts *.md *.jsonc .github/* cloud-dashboards/*.json resources/*.json; prettier --write *.md .github/*.md",
     "lint": "biome lint --fix *.ts *.md *.jsonc .github/* cloud-dashboards/*.json resources/*.json",
     "assist": "biome check --fix *.ts *.md .github/* cloud-dashboards/*.json resources/*.json",
