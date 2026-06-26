@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "prettier": "3.8.5",
-    "@biomejs/biome": "2.5.0"
+    "@biomejs/biome": "2.5.1"
   }
 }
