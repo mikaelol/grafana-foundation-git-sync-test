@@ -16,7 +16,7 @@
     "@grafana/grafana-foundation-sdk": "0.0.8"
   },
   "devDependencies": {
-    "prettier": "3.9.1",
+    "prettier": "3.9.3",
     "@biomejs/biome": "2.5.1"
   }
 }
